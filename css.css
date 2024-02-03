@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Hubot Sans";
+    src: url("../fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+      url("../fonts/Hubot-Sans.woff2") format("woff2-variations");
+    font-weight: 600 100;
+    font-stretch: 75% 125%;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  
+  ::-webkit-scrollbar{
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #310b1f;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #a8cd23;
+  }
+  
+  /* * Main html styles */
+  :root {
+    --smooth-anim: cubic-bezier(0.2, 0, 0.001, 1);
+    --green: #a8cd23;
+    --dark-green: #a8cd23af;
+  }
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    background-color: black;
+    animation: 2s bg;
+    overflow: hidden;
+}
+
+.blurbox {
+  width: 120%;
+  height: 120%;
+  background-color: transparent;
+  position: absolute;
+  animation: blurr 15s;
+  z-index: 100000000000000000000000000000000;
+}
+.enf {
+  width: 120%;
+  height: 120%;
+  background-color: black;
+  position: absolute;
+  animation: end 15s;
+  z-index: 100000000000000000000000000000000;
+}
+
+@keyframes end {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes bg {
+
+    0% {
+        background-color: black;
+    }
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes blurr {
+  0% {
+    backdrop-filter: blur(5em);
+    background-color: black;  
+  }
+  22% {
+    backdrop-filter: blur(0);
+    background-color: transparent;
+  }
+  85%{
+    backdrop-filter: blur(0);
+    background-color: transparent;
+  }
+  100%{
+    backdrop-filter: blur(5em);
+    background-color: black;
+  }
+  
+}
+
+@keyframes gobrr {
+
+    0% {
+        text-shadow: none;
+        color: #a8cd2300;
+    }
+  40% 
+    {
+        color: rgba(255, 255, 255, 0.697);
+        text-shadow: 
+        #4c114000 0px 0px 10px,
+        #4c114000 0px 50px 50px,
+        #4c114000 0px 320px 20px,
+        #4c114000 0px -10px 20px,
+        #4c114000 0px 180px 20px,
+        #4c114000 0px -190px 20px,
+        #4c114000 0px 360px 20px,
+        #4c114000 0px -340px 20px;
+        
+    
+    }
+      69% {
+      text-shadow: 
+    rgb(0, 0, 0) 0px 0px 5px,
+    #d1ff2ce8 0px 0px 100px,
+    #61bb46 0px 0px 0,
+    #963D97 0px 0px 0,
+    #F5821F 0px 0px 0,
+    #E03A3E 0px 0px 0,
+    #FDB827 0px 0px 0,
+    #009DDC 0px 0px 0; 
+  }
+/*     
+  50% {
+    text-shadow: 
+    rgba(0, 0, 0, 0.462) 0px 0px 10px,
+    rgba(0, 0, 0, 0.906) 0px 0px 30px,
+    #d1ff2cba 0px 0px 100px,
+    #d1ff2cba 0px 0px 100px,
+  #d1ff2cba 0px 0px 100px,
+  #d1ff2c8f 0px 0px 100px,
+  #d1ff2cba 0px 0px 100px,
+  #d1ff2cba 0px 0px 100px,
+  #d1ff2cba 0px 0px 100px;
+
+  } */
+
+  100% 
+     {
+      text-shadow: 
+      black 1.5px 1.5px 1px, 
+      black 3px 3px 1px, 
+      #a8cd23 5px 5px 1px, 
+      black 7px 7px 1px, 
+      #a8cd23 9px 9px 1px, 
+      black 11px 11px 1px, 
+      #a8cd23 13px 13px 1px, 
+      rgba(0, 0, 0, 0.399) 13px 13px 10px, 
+      rgba(0, 0, 0, 0.399) 0px 0px 20px;
+        }
+  
+  
+}
+
+#logo {
+    transform: translateY(10px);
+    padding: .5em;
+    user-select: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: .2em;
+    font-family: "Press Start 2P", cursive;
+    font-size: calc(2.5em + 4vw);
+    color: #a8cd23;
+    transition-duration: 250ms;
+    border: none;
+    animation: gobrr 12s cubic-bezier(0.2, 0, 0.001, 1);
+    text-shadow: black 1.5px 1.5px 1px, black 3px 3px 1px, #a8cd23 5px 5px 1px, black 7px 7px 1px, #a8cd23 9px 9px 1px, black 11px 11px 1px, #a8cd23 13px 13px 1px, rgba(0, 0, 0, 0.399) 13px 13px 10px, rgba(0, 0, 0, 0.399) 0px 0px 20px;
+  }
+  
+  #logo::after {
+    position: absolute;
+    content: '.';
+    text-shadow: black 1.5px 1.5px 1px, black 3px 3px 1px, #a8cd23 5px 5px 1px, black 7px 7px 1px, #a8cd23 9px 9px 1px, black 11px 11px 1px, #a8cd23 13px 13px 1px, rgba(0, 0, 0, 0.399) 13px 13px 10px, rgba(0, 0, 0, 0.399) 0px 0px 20px;
+    color: var(--green);
+    animation: gobrr 6s cubic-bezier(0.2, 0, 0.001, 1);
+
+  }
